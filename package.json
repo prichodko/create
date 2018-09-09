@@ -3,15 +3,13 @@
   "private": true,
   "repository": "https://github.com/prichodko/create",
   "author": "Pavel Prichodko",
+  "bin": "./bin/create",
   "devDependencies": {
+    "gittar": "^0.1.1",
     "husky": "^0.14.3",
-    "lerna": "^3.3.0",
     "lint-staged": "^7.2.2",
     "prettier": "^1.14.2"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "lint-staged": {
     "*.js": [
       "prettier --write",
@@ -26,5 +24,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.0"
   }
 }
